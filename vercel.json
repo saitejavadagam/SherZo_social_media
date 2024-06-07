@@ -7,7 +7,7 @@
   "routes" : [
     {
       "src": "/(.*)",
-      "dest": "elevate/wsgi.py"
+      "dest": "sherzo/wsgi.py"
     }
   ]
 }
