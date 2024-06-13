@@ -2,8 +2,13 @@
   "builds": [{
       "src": "sherzo/wsgi.py",
       "use": "@vercel/python",
-      "config": {"maxLambdaSize": "15mb", "runtime": "python3.9"}
-  }],
+      "config": {"maxLambdaSize": "15mb"}
+  },
+    {
+      "src": "static/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes" : [
     {
       "src": "/static/(.*)",
@@ -13,6 +18,5 @@
       "src": "/(.*)",
       "dest": "sherzo/wsgi.py"
     }
-  ],
-  "outputDirectory": "staticfiles_build"
+  ]
 }
